@@ -1,0 +1,1 @@
+from processing.documents import Document

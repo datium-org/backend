@@ -1,0 +1,56 @@
+- table_name: file_management
+  columns:
+    - name: file_id
+      type: SERIAL
+    - name: organization_id
+      type: INT
+    - name: FOREIGN KEY (organization_id)
+      type: REFERENCES public.organizations(id)
+    - name: filename
+      type: VARCHAR(255)
+    - name: extension
+      type: VARCHAR(10)
+    - name: file_hierarchy
+      type: VARCHAR(255)
+    - name: file_source_path
+      type: VARCHAR(255)
+    - name: file_source
+      type: VARCHAR(255)
+    - name: metadata
+      type: TEXT
+    - name: file_size
+      type: VARCHAR(10)
+    - name: PRIMARY KEY
+      type: (organization_id, file_id)
+  partition:
+      by: HASH (organization_id)
+      partitions:
+        - name: file_management_p0
+          for_with: VALUES WITH (MODULUS 6, REMAINDER 0)
+        - name: file_management_p1
+          for_with: VALUES WITH (MODULUS 6, REMAINDER 1)
+        - name: file_management_p2
+          for_with: VALUES WITH (MODULUS 6, REMAINDER 2)
+        - name: file_management_p3
+          for_with: VALUES WITH (MODULUS 6, REMAINDER 3)
+        - name: file_management_p4
+          for_with: VALUES WITH (MODULUS 6, REMAINDER 4)
+        - name: file_management_p5
+          for_with: VALUES WITH (MODULUS 6, REMAINDER 5)
+      
+- table_name: organizations
+  columns:
+    - name: organization_id
+      type: INT PRIMARY KEY
+    - name: name
+      type: VARCHAR(255)
+    - name: business_type
+      type: VARCHAR(255)
+    - name: date_created
+      type: DATE
+    - name: data_hierarchy
+      type: TEXT
+    - name: metadata
+      type: TEXT
+    - name: FOREIGN KEY (organization_id)
+      type: REFERENCES public.organizations(id)

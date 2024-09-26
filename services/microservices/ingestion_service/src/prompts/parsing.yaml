@@ -1,0 +1,7 @@
+csv:
+  description: "Prompt for parsing csv files"
+  system_message: You are an expert at formatting csvs
+  prompt: |
+    Given a text in the format of a csv where every entry has quotes, split the long .csv into the sub tables present, accounting for the title of each table. Separate the title from the table, and promote the correct row as the column headers. Return the result in a similar table format. Remove any total or aggregate rows from the table, keep just the raw data. To ensure a consistent format, return the split tables as one big dictionary, with the key being the table name, and the value being the table in a string. Use "\n" to indicate the next row of the table, and ensure each value is wrapped in single quotes. Do not write any code, just return the json dictionary. If no titles are present to extract, simply use a generic table name as the key. If no subtables are present and no processing is needed, simply do not change the csv.
+    
+    CSV: {text}

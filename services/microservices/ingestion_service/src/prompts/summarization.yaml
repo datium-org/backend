@@ -1,0 +1,11 @@
+dict_sheet:
+  description: "Prompt for summarizing dictionary sheets/tables."
+  system_message: "You are an expert at understanding data"
+  prompt: |
+    Given a dictionary and title of a sheet (which may contain multiple tables), where all NaN values and number values, you must come up with a very short summary/description of the sheet and what it contains. Also, provide a list of category tags that should be associated with the sheet (e.g, marketing). Return the result in a dict format, with one key being "summary", and the other being "tags". For the tags, return a list of strings.
+
+    Format Example: {{"summary": "this is a summary", "tags":["tag1","tag2", ...] }}
+
+    Title: {title}
+
+    Sheet Dictionary: {dict_sheet}

@@ -1,0 +1,16 @@
+- table_name: organizations
+  columns:
+    - name: id
+      type: SERIAL PRIMARY KEY
+    - name: name
+      type: VARCHAR(255)
+    - name: email
+      type: VARCHAR(255)
+    - name: password
+      type: VARCHAR(255)
+    - name: business_type
+      type: VARCHAR(255)
+    - name: date_created
+      type: DATE
+    - name: metadata
+      type: TEXT
