@@ -11,8 +11,6 @@ from typing import Tuple
 from prompts.prompts import PromptLoader, PromptType
 
 
-
-
 class FileProcessor(ABC):
   def __init__(self, file_path: str, temp_dir: str = "tmp", llm_model: Tuple[str, str] = ("openai", "gpt-4o-mini")):
     self.file_path = file_path

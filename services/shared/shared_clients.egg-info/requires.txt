@@ -1,0 +1,15 @@
+boto3>=1.20.0
+requests>=2.25.1
+pyyaml
+psycopg2
+pypdf2
+pandas
+openpyxl
+fastapi
+langchain
+langchain-openai
+openai
+transformers
+langchain-huggingface
+numpy
+python-dotenv
