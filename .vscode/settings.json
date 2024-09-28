@@ -1,0 +1,8 @@
+{
+  "python.analysis.extraPaths": [
+    "/Users/alialh/Development/Datium/Datium Development/backend/shared"
+  ],
+  "python.analysis.fixAll": [
+    
+  ]
+}

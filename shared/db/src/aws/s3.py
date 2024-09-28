@@ -18,15 +18,15 @@ class S3Client:
   """
 
   def __init__(
-      self,
-      bucket_name: str,
-      aws_access_key_id: Optional[str] = None,
-      aws_secret_access_key: Optional[str] = None,
-      aws_region: Optional[str] = None,
-      endpoint_url: Optional[str] = None,  # For MinIO or LocalStack
-      use_ssl: bool = True,
-      verify_ssl: bool = True,
-      s3_config: Optional[Dict] = None
+    self,
+    bucket_name: str,
+    aws_access_key_id: Optional[str] = None,
+    aws_secret_access_key: Optional[str] = None,
+    aws_region: Optional[str] = None,
+    endpoint_url: Optional[str] = None,  # For MinIO or LocalStack
+    use_ssl: bool = True,
+    verify_ssl: bool = True,
+    s3_config: Optional[Dict] = None
   ):
     """
     Initializes the S3Client with necessary configurations.
@@ -132,10 +132,10 @@ class S3Client:
 
     try:
       self.s3_client.upload_file(
-          Filename=file_path,
-          Bucket=self.bucket_name,
-          Key=object_name,
-          ExtraArgs=upload_extra_args
+        Filename=file_path,
+        Bucket=self.bucket_name,
+        Key=object_name,
+        ExtraArgs=upload_extra_args
       )
       logger.info(f"File '{file_path}' uploaded as '{object_name}'.")
       return True
