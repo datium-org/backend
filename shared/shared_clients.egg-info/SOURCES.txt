@@ -1,7 +1,6 @@
 setup.py
 db/__init__.py
 db/src/__init__.py
-db/src/manager.py
 db/src/schema.py
 db/src/table.py
 intelligence/__init__.py

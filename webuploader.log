@@ -1,0 +1,46 @@
+2024-10-31 16:55:10,959 - INFO - Created sync folder at: /Users/alialh/WebUploadSync
+2024-10-31 17:28:08,742 - INFO - Created sync folder at: /Users/alialh/Documents/WebUploadSync
+2024-10-31 17:29:25,378 - INFO - Created sync folder at: /Users/alialh/Documents/WebUploadSync
+2024-10-31 17:35:27,669 - INFO - Using existing sync folder at: /Users/alialh/Documents/WebUploadSync
+2024-10-31 17:36:23,882 - INFO - Using existing sync folder at: /Users/alialh/Documents/WebUploadSync
+2024-10-31 17:36:27,916 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/Sub/.DS_Store
+2024-10-31 17:36:27,917 - INFO - File deleted: /Users/alialh/Documents/WebUploadSync/Sub/Ali_Hamdani_Resume.pdf
+2024-10-31 17:36:27,917 - INFO - Directory modified: /Users/alialh/Documents/WebUploadSync/Sub
+2024-10-31 17:36:32,927 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/Sub/.DS_Store
+2024-10-31 17:37:01,800 - INFO - Directory deleted: /Users/alialh/Documents/WebUploadSync/Sub
+2024-10-31 17:37:01,801 - INFO - Directory modified: /Users/alialh/Documents/WebUploadSync
+2024-10-31 17:37:44,110 - INFO - Using existing sync folder at: /Users/alialh/Documents/WebUploadSync
+2024-10-31 17:37:46,936 - INFO - Directory created: /Users/alialh/Documents/WebUploadSync/untitled folder
+2024-10-31 17:37:46,937 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:37:47,795 - INFO - Directory moved/renamed from /Users/alialh/Documents/WebUploadSync/untitled folder to /Users/alialh/Documents/WebUploadSync/hi
+2024-10-31 17:37:51,940 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:38:21,771 - INFO - File created: /Users/alialh/Documents/WebUploadSync/Ali_s_Resume (2).pdf
+2024-10-31 17:38:29,881 - INFO - File moved/renamed from /Users/alialh/Documents/WebUploadSync/Ali_s_Resume (2).pdf to /Users/alialh/Documents/WebUploadSync/hi/Ali_s_Resume (2).pdf
+2024-10-31 17:38:58,241 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:39:01,255 - INFO - File moved/renamed from /Users/alialh/Documents/WebUploadSync/hi/Ali_s_Resume (2).pdf to /Users/alialh/Documents/WebUploadSync/hi/renamed file.pdf
+2024-10-31 17:39:12,260 - INFO - File moved/renamed from /Users/alialh/Documents/WebUploadSync/hi/renamed file.pdf to /Users/alialh/Documents/WebUploadSync/hi/Ali_s_Resume (2).pdf
+2024-10-31 17:39:12,481 - INFO - File moved/renamed from /Users/alialh/Documents/WebUploadSync/hi/Ali_s_Resume (2).pdf to /Users/alialh/Documents/WebUploadSync/Ali_s_Resume (2).pdf
+2024-10-31 17:39:13,124 - INFO - File created: /Users/alialh/Documents/WebUploadSync/hi/.DS_Store
+2024-10-31 17:39:13,124 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/hi/.DS_Store
+2024-10-31 17:39:13,125 - INFO - File deleted: /Users/alialh/Documents/WebUploadSync/Ali_s_Resume (2).pdf
+2024-10-31 17:39:18,127 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:40:03,291 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:40:04,322 - INFO - Directory deleted: /Users/alialh/Documents/WebUploadSync/hi
+2024-10-31 17:40:08,634 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:40:08,636 - INFO - Directory created: /Users/alialh/Documents/WebUploadSync/hi
+2024-10-31 17:40:08,637 - INFO - File created: /Users/alialh/Documents/WebUploadSync/hi/.DS_Store
+2024-10-31 17:40:13,650 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:40:15,895 - INFO - File created: /Users/alialh/Documents/WebUploadSync/IMG_5030.jpg
+2024-10-31 17:40:15,896 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/IMG_5030.jpg
+2024-10-31 17:40:20,937 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:40:23,212 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:40:23,212 - INFO - File moved/renamed from /Users/alialh/Documents/WebUploadSync/IMG_5030.jpg to /Users/alialh/Documents/WebUploadSync/hi/IMG_5030.jpg
+2024-10-31 17:40:27,599 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:40:27,600 - INFO - Directory deleted: /Users/alialh/Documents/WebUploadSync/hi
+2024-10-31 17:41:10,778 - INFO - Directory created: /Users/alialh/Documents/WebUploadSync/untitled folder
+2024-10-31 17:41:10,780 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/.DS_Store
+2024-10-31 17:41:11,980 - INFO - Directory moved/renamed from /Users/alialh/Documents/WebUploadSync/untitled folder to /Users/alialh/Documents/WebUploadSync/Hello
+2024-11-01 05:35:43,132 - INFO - Using existing sync folder at: /Users/alialh/Documents/WebUploadSync
+2024-11-01 05:35:59,340 - INFO - File created: /Users/alialh/Documents/WebUploadSync/ECE109 HW#2_2021b.pdf
+2024-11-01 05:35:59,341 - INFO - File modified: /Users/alialh/Documents/WebUploadSync/ECE109 HW#2_2021b.pdf
+2024-11-01 05:36:06,525 - INFO - File deleted: /Users/alialh/Documents/WebUploadSync/ECE109 HW#2_2021b.pdf

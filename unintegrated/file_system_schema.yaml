@@ -1,0 +1,46 @@
+- table_name: folders
+  columns:
+    - name: folder_id
+      type: UUID PRIMARY KEY DEFAULT uuid_generate_v4()
+    - name: name
+      type: VARCHAR(255) NOT NULL
+    - name: created_at
+      type: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    - name: updated_at
+      type: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+
+- table_name: folder_closure
+  columns:
+    - name: ancestor_id
+      type: UUID
+    - name: descendant_id
+      type: UUID
+    - name: depth
+      type: INTEGER NOT NULL
+    - name: FOREIGN KEY (ancestor_id)
+      type: REFERENCES test.folders(folder_id)
+    - name: FOREIGN KEY (descendant_id)
+      type: REFERENCES test.folders(folder_id)
+    - name: PRIMARY KEY 
+      type: (ancestor_id, descendant_id)
+
+- table_name: files
+  columns:
+    - name: file_id
+      type: UUID PRIMARY KEY DEFAULT uuid_generate_v4()
+    - name: folder_id
+      type: UUID
+    - name: name
+      type: VARCHAR(255) NOT NULL
+    - name: file_type
+      type: VARCHAR(50)
+    - name: size_bytes
+      type: BIGINT
+    - name: created_at
+      type: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    - name: updated_at
+      type: TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    - name: metadata
+      type: JSONB
+    - name: FOREIGN KEY (folder_id)
+      type: REFERENCES test.folders(folder_id)

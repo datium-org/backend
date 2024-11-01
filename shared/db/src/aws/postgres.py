@@ -1,5 +1,6 @@
 import psycopg2
 from psycopg2 import sql
+from psycopg2.extras import register_uuid
 from typing import Optional, Tuple, List, Any
 import yaml
 import os
@@ -28,6 +29,7 @@ class Postgres:
       host=self.host,
       port=self.port
     )
+    register_uuid()
     self.connection.autocommit = True  # Automatically commit changes
 
   def close(self) -> None:

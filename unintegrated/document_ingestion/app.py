@@ -5,10 +5,8 @@ import uvicorn
 app = FastAPI()
 
 @app.post("/callback")
-async def create_upload_file(file: UploadFile):
-  contents = await file.read()
-  print(contents)
-  return {"filename": file.filename}
+async def callback():
+  return {"callback": "callbacked"}
 
 @app.get("/")
 async def root():
