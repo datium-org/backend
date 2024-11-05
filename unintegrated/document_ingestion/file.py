@@ -1,7 +1,8 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 from typing import Optional
 from enum import Enum
 import datetime
+import json
 from pydrive.drive import GoogleDrive
 from pydrive.files import GoogleDriveFile
 
@@ -11,18 +12,48 @@ class DataSource(Enum):
   GMAIL="Gmail"
   MANUAL="Manual"
 
+class FileExtensions(Enum):
+  PDF = "pdf"
+  DOCX = "docx"
+  DOC = "doc"
+  TXT = "txt"
+  CSV = "csv"
+  XLSX = "xlsx"
+  XLS = "xls"
+  JPG = "jpg"
+  PNG = "png"
+  SVG = "svg"
+  HTML = "html"
+  XML = "xml"
+  JSON = "json"
+
+class FileObject:
+  def __init__(self) -> None:
+    self.text_sections = []
+    self.tables = []
+    self.images = []
+
+  def __str__(self) -> str:
+    return f"Text sections: {self.text_sections}, Tables: {self.tables}, Images: {self.images}"
+  
+  def tables_to_json(self) -> json:
+    return self.tables
+  
 
 # Read-only File
 class File(BaseModel):
   title: str = Field(..., description="File name")
   source: DataSource = Field(..., description="File source")
   source_id: str = Field(..., description="Id of the file in the source")
-  extension: str = Field(..., description="File extension")
+  mime_type: str = Field(..., description="MIME type")
   size: int = Field(..., description="Size in bytes")
   created_date: datetime = Field(..., description="Created date")
   modified_date: datetime = Field(..., description="Modified date")
   last_viewed_by_me: datetime = Field(..., description="Last viewed by me date")
-  content: Optional[str] = None  # Content can be loaded lazily
+  summary: Optional[str] = None
+  content: Optional[FileObject] = None  # Content can be loaded lazily
+
+  model_config = ConfigDict(arbitrary_types_allowed=True)
 
   def to_gdrive_file(self, drive: GoogleDrive) -> GoogleDriveFile:
     """Turn the file into a Google Drive File."""
@@ -34,13 +65,13 @@ class File(BaseModel):
   def from_gdrive_file(self, file: GoogleDriveFile):
     title = file["title"]
     source_id = file["id"]
-    extension = file["fileExtension"]
+    mime_type = file["mimeType"]
     size = file["fileSize"]
     created_date = file["createdDate"]
     modified_date = file["modifiedDate"]
     last_viewed_by_me = file["lastViewedByMeDate"]
 
-    return File(title, DataSource.DRIVE, source_id, extension, size, created_date, modified_date, last_viewed_by_me)
+    return File(title, DataSource.DRIVE, source_id, mime_type, size, created_date, modified_date, last_viewed_by_me)
   
 
 
