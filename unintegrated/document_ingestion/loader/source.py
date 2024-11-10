@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
-from file import File, DataSource
+from file.file import File, DataSource
+
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 from pydrive.files import GoogleDriveFile
