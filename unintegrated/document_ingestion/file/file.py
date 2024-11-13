@@ -62,17 +62,25 @@ class File(BaseModel):
     return file
   
   @classmethod
-  def from_gdrive_file(self, file: GoogleDriveFile):
-    title = file["title"]
-    source_id = file["id"]
-    mime_type = file["mimeType"]
-    size = file["fileSize"]
-    created_date = file["createdDate"]
-    modified_date = file["modifiedDate"]
-    last_viewed_by_me = file["lastViewedByMeDate"]
+  def from_gdrive_file(cls, file: GoogleDriveFile):
+    title = file.get("title", "")
+    source_id = file.get("id", "")
+    mime_type = file.get("mimeType", "")
+    size = file.get("fileSize", 0)
+    created_date = file.get("createdDate", None)
+    modified_date = file.get("modifiedDate", None)
+    last_viewed_by_me = file.get("lastViewedByMeDate", None)
 
-    return File(title, DataSource.DRIVE, source_id, mime_type, size, created_date, modified_date, last_viewed_by_me)
-  
+    return File(
+      title=title, 
+      source=DataSource.DRIVE, 
+      source_id=source_id, 
+      mime_type=mime_type, 
+      size=size, 
+      created_date=created_date, 
+      modified_date=modified_date, 
+      last_viewed_by_me=last_viewed_by_me
+    )
 
 
 
